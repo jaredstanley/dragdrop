@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>File(s) size</title>
+
+<style>
+    #dropbox{
+        position:absolute;
+        background-color:slategrey;
+        width:506px;
+        height: 253px;
+        overflow: hidden;
+        margin: 0%;
+        padding: 0%;
+    }
+    //
+    #display{
+        position: relative;
+        
+    }   
+    #title{
+        position: absolute;
+        z-index: 10;
+        top: 130px;
+        text-align: center;
+        
+        
+    }
+    #container{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+</head>
+
+<body>
+<div id="container">
+    <h1>image creator</h1>
+    <div id="dropbox">
+        <div id="msg">drag image in here bro</div>   
+        
+        <img src="" alt="" id="display" class="obj">
+        <div id="title" contenteditable="true">Please</div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
