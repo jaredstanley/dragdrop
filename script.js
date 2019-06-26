@@ -36,7 +36,7 @@ _App.handleFiles=function(files) {
     _App.img = document.getElementById("display");
     
     _App.img.file = file;
-    document.getElementById("msg").setAttribute('hidden', true);
+    document.getElementById("instructions").setAttribute('hidden', true);
     dropbox.appendChild(_App.img); 
     _App.img.setAttribute('width', dropbox.offsetWidth);
     _App.img.style.position= 'relative';
@@ -62,13 +62,11 @@ function dragMouseDown(e) {
     
     e = e || window.event;
     e.preventDefault();
-    // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
     // console.log(pos3);
     
     document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
   }
 
@@ -77,15 +75,10 @@ function dragMouseDown(e) {
       
     e = e || window.event;
     e.preventDefault();
-    // calculate the new cursor position:
     pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    // set the element's new position:
-    // _App.img.setAttribute('left', (_App.img.offsetLeft - pos1) + "px"); 
-    // _App.img.setAttribute('top', (_App.img.offsetTop - pos2) + "px"); 
-    // _App.img.style.left = pos3+"px";
     // console.log(_App.img.style.left);
     
 
@@ -95,7 +88,6 @@ function dragMouseDown(e) {
   }
 
   function closeDragElement() {
-    // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
   }

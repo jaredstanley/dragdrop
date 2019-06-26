@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>File(s) size</title>
+<title>Ian Tool</title>
 
 <style>
     #dropbox{
@@ -19,11 +19,14 @@
         position: relative;
         
     }   
-    #title{
+    #mainText{
         position: absolute;
         z-index: 10;
         top: 130px;
         text-align: center;
+        width:200px;
+        margin: 0 30%;
+        background-color: antiquewhite;
         
         
     }
@@ -32,6 +35,9 @@
         display: flex;
         justify-content: center;
     }
+    #instructions{
+        font-size: 2em;
+    }
 </style>
 </head>
 
@@ -39,10 +45,10 @@
 <div id="container">
     <h1>image creator</h1>
     <div id="dropbox">
-        <div id="msg">drag image in here bro</div>   
+        <div id="instructions">drag image in here bro</div>   
         
         <img src="" alt="" id="display" class="obj">
-        <div id="title" contenteditable="true">Please</div>
+        <div id="mainText" contenteditable="true">Please</div>
     </div>
 </div>
 <script src="script.js"></script>
